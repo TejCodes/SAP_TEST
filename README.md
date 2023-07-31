@@ -14,7 +14,7 @@ which need to be produced and thereby assembled to manufacture a motorcycle.
 
 ## **Output:**
 Under the assumption that, each Motorcycle only requires 1 brake system and 1 fuel tank system, output.json is generated which contains
-the list of assembled motorcycles and their respective assembly status.
+the list of assembled motorcycles and their respective assembly statuses.
 
 
 ## **Setting Outage parameters:**
