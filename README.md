@@ -5,16 +5,16 @@ Please Use the Following commmand to run the Application:
 
 Results of the Problem Statement are visible in the command line.
 
-Input:
+**Input:**
 Demo application takes input.json as input, which basically has 999 brakes and 999 tanks ( with unique part_id and part_number ), 
 which need to be produced and thereby assembled to manufacture a motorcycle.
 
-Output:
+**Output:**
 Under the assumption that, each Motorcycle only requires 1 Brake system and 1 Fuel Tank system, Output.json is generated which contains
 the list of assembled motorcycles and their respective assembly status.
 
 
-Setting Outage parameters:
+**Setting Outage parameters:**
 
 outage_start_time: Number of Milliseconds after which the outage should start.
 outage_duration: Number of Milliseconds the Outage should last. 
@@ -22,9 +22,9 @@ outage_duration: Number of Milliseconds the Outage should last.
 Please SET outage_duration =0, to disable outage functionality.
 
 
-RESULTS:
+**RESULTS:**
 
-TESTCASE 1:
+**TESTCASE 1:**
 
 Multithreading enabled - without outage:
 
@@ -92,7 +92,7 @@ All the queues were back to functioning post the Outage, and we can see it Overr
 larger than when there was no outage.
 
 
-Test Case 2:
+**Test Case 2:**
 
 With Multithreading:
 
