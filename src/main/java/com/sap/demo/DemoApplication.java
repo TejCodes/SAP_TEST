@@ -16,6 +16,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import java.io.FileWriter;
 
+//uncommenting code on lines 261, 380 and 381 disables multithreading
 @SpringBootApplication
 public class DemoApplication {
 
@@ -46,8 +47,8 @@ public class DemoApplication {
 
         Vector<Boolean> if_outage = new Vector<Boolean>();
         if_outage.add(false);
-        long outage_start_time=10;
-        long outage_duration=15000;
+        long outage_start_time=15000;
+        long outage_duration=0;
 
 
         // Producer Thread -> reads from input.json and waits till materials are procured (i.e 10 milliseconds) and adds to the
@@ -256,8 +257,8 @@ class Processor implements Runnable {
         String part_number;
         int number = 0;
 
-		// Uncommenting below code disables Multithreading
-        // while(input_que.size()!=999);
+	// Uncommenting below code disables Multithreading
+        //while(input_que.size()!=999);
 
         // Thread keeps looping until we process the last part whose part_number is 999.
         while (number != 999) {
@@ -375,7 +376,7 @@ class Assembler implements Runnable {
     
         int number =0;
 
-		// Uncommenting below code disables Multithreading
+	// Uncommenting below code disables Multithreading
         // while(brake_assembly_que.size()!=999);
         // while(tank_assembly_que.size()!=999);
     
@@ -396,6 +397,7 @@ class Assembler implements Runnable {
                     number++;
 
                     if(number==1){
+						System.out.println();
                          System.out.println("---- Assembly Started ------");
                         System.out.println();
                     }
@@ -448,20 +450,22 @@ class Outage implements Runnable {
                 // outage thread is made to sleep for outage_start_time milliseconds.
                 Thread.sleep(outage_start_time);
 
-                System.out.println();
-                System.out.println("Outage Started");
+				if(outage_duration!=0){
+					System.out.println();
+					System.out.println("Outage Started");
 
-                // all concurrent threads who have access to if_outage vector halt their
-                // production tasks till Outage ends.
+					// all concurrent threads who have access to if_outage vector halt their
+					// production tasks till Outage ends.
 
-                if_outage.add(0,true);
-                Thread.sleep(outage_duration);
+					if_outage.add(0,true);
+					Thread.sleep(outage_duration);
 
-                System.out.println();
-                System.out.println("Outage Ended");
-                System.out.println();
-    
-                if_outage.add(0,false);
+					System.out.println();
+					System.out.println("Outage Ended");
+					System.out.println();
+		
+					if_outage.add(0,false);
+				}
 
                 // production tasks are resumed.
 
