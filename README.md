@@ -5,7 +5,7 @@ Please Use the Following commmand to run the Application:
 
 Results of the Problem Statement are visible in the command line.
 
-#__Input:__
+##Input:
 Demo application takes input.json as input, which basically has 999 brakes and 999 tanks ( with unique part_id and part_number ), 
 which need to be produced and thereby assembled to manufacture a motorcycle.
 
