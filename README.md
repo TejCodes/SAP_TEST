@@ -17,12 +17,13 @@ the list of assembled motorcycles and their respective assembly status.
 ## **Setting Outage parameters:**
 
 Outage_start_time: Number of Milliseconds after which the outage should start.
+
 Outage_duration: Number of Milliseconds the Outage should last. 
 
 Please SET outage_duration =0, to disable outage functionality.
 
 
-# **RESULTS:**
+## **RESULTS:**
 
 ## **TESTCASE 1:**
 
@@ -59,6 +60,7 @@ Motorcycles assembly completed at: 42385 milliseconds.
 ### Multithreading enabled - with outage:
 
 outage_start_time=15000; // outage starts at 15,000 miliiseconds.
+
 outage_duration=15000;  // outage lasts till 30,000 milliseconds.
 
 ---- Assembly Started ------
