@@ -1,20 +1,20 @@
-##SAP_TEST
+## SAP_TEST
 
 Please Use the Following commmand to run the Application:
 ./mvnw spring-boot:run
 
 Results of the Problem Statement are visible in the command line.
 
-##Input:
+## Input:
 Demo application takes input.json as input, which basically has 999 brakes and 999 tanks ( with unique part_id and part_number ), 
 which need to be produced and thereby assembled to manufacture a motorcycle.
 
-#**Output:**
+## **Output:**
 Under the assumption that, each Motorcycle only requires 1 Brake system and 1 Fuel Tank system, Output.json is generated which contains
 the list of assembled motorcycles and their respective assembly status.
 
 
-#**Setting Outage parameters:**
+## **Setting Outage parameters:**
 
 Outage_start_time: Number of Milliseconds after which the outage should start.
 Outage_duration: Number of Milliseconds the Outage should last. 
@@ -22,11 +22,11 @@ Outage_duration: Number of Milliseconds the Outage should last.
 Please SET outage_duration =0, to disable outage functionality.
 
 
-##**RESULTS:**
+# **RESULTS:**
 
-#**TESTCASE 1:**
+## **TESTCASE 1:**
 
-#Multithreading enabled - without outage:
+### Multithreading enabled - without outage:
 
 ---- Assembly Started ------
 
@@ -56,7 +56,7 @@ Motorcycles assembly completed at: 42385 milliseconds.
 
 
 
-#Multithreading enabled - with outage:
+### Multithreading enabled - with outage:
 
 outage_start_time=15000; // outage starts at 15,000 miliiseconds.
 outage_duration=15000;  // outage lasts till 30,000 milliseconds.
@@ -95,9 +95,9 @@ All the queues were back to functioning post the Outage, and we can see it Overr
 larger than when there was no outage.
 
 
-##**Test Case 2:**
+## **Test Case 2:**
 
-#With Multithreading:
+### With Multithreading:
 
 ---- Assembly Started ------
 
@@ -129,7 +129,7 @@ have completed packing_and_storage stage, the assembly has begun immediately.
 
 
 
-#Without MultiThreading:
+### Without MultiThreading:
 
 To simulate the case without multithreading, every production task was only started after its queue was completely full (i.e. 999 items).
 For example, Machining and Forming was started only after the machining_and_forming_que was full.
