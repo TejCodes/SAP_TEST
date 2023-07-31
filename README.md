@@ -16,8 +16,8 @@ the list of assembled motorcycles and their respective assembly status.
 
 **Setting Outage parameters:**
 
-outage_start_time: Number of Milliseconds after which the outage should start.
-outage_duration: Number of Milliseconds the Outage should last. 
+Outage_start_time: Number of Milliseconds after which the outage should start.
+Outage_duration: Number of Milliseconds the Outage should last. 
 
 Please SET outage_duration =0, to disable outage functionality.
 
@@ -53,7 +53,10 @@ Multithreading enabled - without outage:
 Motorcycles assembly completed at: 42385 milliseconds.
 
 
-Multithreading enabled -  outage:
+
+
+
+Multithreading enabled - with outage:
 
 outage_start_time=15000; // outage starts at 15,000 miliiseconds.
 outage_duration=15000;  // outage lasts till 30,000 milliseconds.
@@ -122,6 +125,9 @@ Motorcycles assembly completed at: 42385 milliseconds.
 
 We can see from the above results that, Assembly started pretty early on, which is in a indication that the moment 1st brake and 1st tank 
 have completed packing_and_storage stage, the assembly has begun immediately.
+
+
+
 
 Without MultiThreading:
 
